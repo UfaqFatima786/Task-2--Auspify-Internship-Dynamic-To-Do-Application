@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern task manager to organize your daily tasks.">
+  <title>TaskFlow | Task Manager</title>
+   <link rel="icon"
+        href="  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZy0ahLobIUYFF_iNd-WzrkHyD_MAvpN03rYlHz87oAA&s=10"
+        type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <a href="#" class="brand">
+        <span class="brand-icon">✓</span>
+        <span>Task<span class="brand-accent">Flow</span></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+
+      <nav class="sidebar-nav">
+        <a href="#dashboard" class="nav-link active">
+          <span>▦</span> My Tasks
+        </a>
+        <a href="#task-section" class="nav-link">
+          <span>◷</span> Task Overview
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="avatar">TF</div>
+          <div>
+            <strong>My Workspace</strong>
+            <small>Personal Planner</small>
+          </div>
+        </div>
+        <p class="sidebar-note">Small steps lead to big results.</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="current-date">YOUR PRODUCTIVITY SPACE</p>
+          <h1>My Tasks <span class="wave">✦</span></h1>
+          <p class="subtitle">Plan your day. Focus on what matters.</p>
+        </div>
+        <div class="today-badge">
+          <span class="status-dot"></span> Stay productive
+        </div>
+      </header>
+
+      <section class="stats-grid" aria-label="Task statistics">
+        <article class="stat-card">
+          <div class="stat-top">
+            <span>Total Tasks</span>
+            <span class="stat-icon purple">▤</span>
+          </div>
+          <h2 id="total-count">0</h2>
+          <p>All your tasks</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top">
+            <span>In Progress</span>
+            <span class="stat-icon blue">◷</span>
+          </div>
+          <h2 id="pending-count">0</h2>
+          <p>Still to complete</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top">
+            <span>Completed</span>
+            <span class="stat-icon green">✓</span>
+          </div>
+          <h2 id="completed-count">0</h2>
+          <p>Tasks accomplished</p>
+        </article>
+      </section>
+
+      <section class="progress-card">
+        <div class="progress-heading">
+          <div>
+            <h3>Daily Progress</h3>
+            <p>Keep going, you're doing great!</p>
+          </div>
+          <strong id="progress-percent">0%</strong>
+        </div>
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Task completion progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+          id="progress-track"
+        >
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </section>
+
+      <section class="task-section" id="task-section">
+        <div class="section-heading">
+          <div>
+            <h2>My Task List</h2>
+            <p>Manage your tasks in one place.</p>
+          </div>
+          <span class="task-counter" id="list-count">0 tasks</span>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <label for="task-input" class="sr-only">Enter a new task</label>
+          <input
+            type="text"
+            id="task-input"
+            placeholder="What do you need to get done?"
+            maxlength="200"
+            autocomplete="off"
+            required
+          >
+          <button type="submit" class="add-btn">
+            <span>+</span> Add Task
+          </button>
+        </form>
+
+        <div class="filter-row" aria-label="Filter tasks">
+          <div class="filter-buttons">
+            <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-btn" data-filter="pending" aria-pressed="false">Pending</button>
+            <button type="button" class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+          </div>
+          <button type="button" id="clear-completed" class="clear-btn">
+            Clear completed
+          </button>
+        </div>
+
+        <div id="task-list" class="task-list" aria-live="polite"></div>
+
+        <div id="empty-state" class="empty-state">
+          <div class="empty-icon">✦</div>
+          <h3 id="empty-title">Your space is ready!</h3>
+          <p id="empty-message">Add your first task and start making progress.</p>
+        </div>
+
+        <footer class="list-footer">
+          <span>✦ One task at a time.</span>
+          <span><span class="storage-dot"></span> Saved locally on your device</span>
+        </footer>
+      </section>
+
+      <footer class="page-footer">
+        Crafted for better days <span>♥</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
