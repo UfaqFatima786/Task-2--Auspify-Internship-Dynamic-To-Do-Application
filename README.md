@@ -57,8 +57,6 @@ TaskFlow provides a centralized workspace for managing everyday tasks.
 - **Task List:** Add, complete, filter, and clear tasks.
 - **Local Data Storage:** Retain saved tasks between browser sessions.
 
-```
-
 ## 🧠 Key Learning Outcomes
 
 Working on this project helped me strengthen my understanding of:
