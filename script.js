@@ -19,8 +19,6 @@ const STORAGE_KEY = "taskFlowTasks";
 
 let tasks = [];
 let currentFilter = "all";
-
-// Load tasks safely from Local Storage
 try {
   const savedTasks = localStorage.getItem(STORAGE_KEY);
 
@@ -41,7 +39,6 @@ try {
   console.error("Unable to load saved tasks:", error);
 }
 
-// Save tasks
 function saveTasks() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
@@ -52,8 +49,6 @@ function saveTasks() {
     return false;
   }
 }
-
-// Generate a unique ID
 function generateId() {
   if (window.crypto && window.crypto.randomUUID) {
     return window.crypto.randomUUID();
@@ -62,8 +57,6 @@ function generateId() {
   return Date.now().toString(36) +
     Math.random().toString(36).slice(2);
 }
-
-// Format date and time
 function formatDate(dateString) {
   const date = new Date(dateString);
 
@@ -78,8 +71,6 @@ function formatDate(dateString) {
     minute: "2-digit"
   });
 }
-
-// Update the dashboard statistics
 function updateStats() {
   const total = tasks.length;
   const completed = tasks.filter(task => task.completed).length;
@@ -102,7 +93,6 @@ function updateStats() {
     `${total} ${total === 1 ? "task" : "tasks"}`;
 }
 
-// Update the empty state
 function updateEmptyState(visibleTasks) {
   const isEmpty = visibleTasks.length === 0;
 
@@ -126,8 +116,6 @@ function updateEmptyState(visibleTasks) {
     }
   }
 }
-
-// Create a task element safely
 function createTaskElement(task) {
   const item = document.createElement("article");
   item.className = "task-item";
@@ -184,8 +172,6 @@ function createTaskElement(task) {
 
   return item;
 }
-
-// Display tasks according to the active filter
 function renderTasks() {
   taskList.replaceChildren();
 
@@ -208,8 +194,6 @@ function renderTasks() {
   updateEmptyState(visibleTasks);
   updateStats();
 }
-
-// Add a new task
 function addTask(title) {
   const task = {
     id: generateId(),
@@ -228,8 +212,6 @@ function addTask(title) {
 
   renderTasks();
 }
-
-// Toggle task completion
 function toggleTask(id) {
   const task = tasks.find(task => task.id === id);
 
@@ -245,8 +227,6 @@ function toggleTask(id) {
 
   renderTasks();
 }
-
-// Delete a task
 function deleteTask(id) {
   const index = tasks.findIndex(task => task.id === id);
 
