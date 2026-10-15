@@ -22,8 +22,6 @@
 
 Built with HTML5, CSS3, and JavaScript (ES6 ), this project focuses on dynamic user interactions, responsive web design, and local data persistence using the browser's LocalStorage.
 
-The application combines practical task management functionality with a polished interface to make everyday planning simple and efficient.
-
 ## ✨ Features
 
 - ➕ **Add Tasks:** Quickly add new tasks to your personal task list.
@@ -76,9 +74,6 @@ Working on this project helped me strengthen my understanding of:
 The objective of this internship task was to build a functional and visually appealing task management application while applying core frontend development concepts to a practical project.
 
 TaskFlow demonstrates how HTML, CSS, and JavaScript can work together to create an interactive productivity tool with dynamic updates and persistent local data.
-
-
-Frontend Web Developer | Geography Graduate | MBA Student
 
 - 🌐 **GitHub:** [@UfaqFatima786](https://github.com/UfaqFatima786)
 
