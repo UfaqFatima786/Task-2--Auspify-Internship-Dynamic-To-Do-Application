@@ -20,7 +20,7 @@
 
 **TaskFlow** is a modern and interactive To-Do Application developed as **Task 2 of my Auspify Internship**. It is designed to help users organize daily activities, manage pending tasks, track completed work, and monitor their productivity through a clean and user-friendly dashboard.
 
-Built with HTML, CSS, and JavaScript, this project focuses on dynamic user interactions, responsive web design, and local data persistence using the browser's LocalStorage.
+Built with HTML5, CSS3, and JavaScript (ES6 ), this project focuses on dynamic user interactions, responsive web design, and local data persistence using the browser's LocalStorage.
 
 The application combines practical task management functionality with a polished interface to make everyday planning simple and efficient.
 
